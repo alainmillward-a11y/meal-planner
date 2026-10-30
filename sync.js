@@ -26,7 +26,7 @@ const Sync = (() => {
   function flatten(state) {
     const rows = {};
     for (const [d, v] of Object.entries(state.plan)) if (v) rows["plan:" + d] = v;
-    for (const [d, v] of Object.entries(state.portions)) if (v) rows["portions:" + d] = v;
+    for (const [d, v] of Object.entries(state.guests)) if (v) rows["guests:" + d] = v;
     for (const [d, v] of Object.entries(state.busy)) if (v) rows["busy:" + d] = true;
     for (const [d, v] of Object.entries(state.training)) if (v) rows["training:" + d] = true;
     for (const [k, v] of Object.entries(state.pantry)) if (v) rows["pantry:" + k] = true;
@@ -34,6 +34,7 @@ const Sync = (() => {
     for (const [k, v] of Object.entries(state.bought)) if (v) rows["bought:" + k] = true;
     for (const x of state.extras) rows["extra:" + x.name.toLowerCase()] = { name: x.name, aisle: x.aisle || "Other" };
     rows["prefs"] = state.prefs;
+    rows["recent"] = state.recent;
     return rows;
   }
 
@@ -45,7 +46,7 @@ const Sync = (() => {
     const setOrDelete = (obj, k, v) => { if (v == null || v === false) delete obj[k]; else obj[k] = v; };
     switch (kind) {
       case "plan": setOrDelete(state.plan, rest, value); break;
-      case "portions": setOrDelete(state.portions, rest, value); break;
+      case "guests": setOrDelete(state.guests, rest, value); break;
       case "busy": setOrDelete(state.busy, rest, value); break;
       case "training": setOrDelete(state.training, rest, value); break;
       case "pantry": setOrDelete(state.pantry, rest, value); break;
@@ -56,6 +57,7 @@ const Sync = (() => {
         if (value) state.extras.push(value);
         break;
       case "prefs": if (value) state.prefs = Object.assign({}, state.prefs, value); break;
+      case "recent": state.recent = Array.isArray(value) ? value : []; break;
     }
   }
 

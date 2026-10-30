@@ -571,5 +571,1835 @@
       "Stir in most of the cheese, then the macaroni. Pour into a dish.",
       "Top with sliced tomatoes and the rest of the cheese. Grill or bake at 200°C for 15 minutes."
     ]
+  },
+  {
+    "name": "Chicken Fajitas",
+    "serves": 4,
+    "time": 25,
+    "tags": [
+      "quick",
+      "high-carb"
+    ],
+    "ingredients": [
+      {
+        "name": "Chicken breast",
+        "quantity": 500,
+        "unit": "g",
+        "aisle": "Meat & Fish"
+      },
+      {
+        "name": "Red pepper",
+        "quantity": 2,
+        "unit": "",
+        "aisle": "Fruit & Veg"
+      },
+      {
+        "name": "Onion",
+        "quantity": 1,
+        "unit": "",
+        "aisle": "Fruit & Veg"
+      },
+      {
+        "name": "Fajita seasoning",
+        "quantity": 1,
+        "unit": "sachet",
+        "aisle": "Herbs & Spices"
+      },
+      {
+        "name": "Tortilla wraps",
+        "quantity": 8,
+        "unit": "",
+        "aisle": "Bakery"
+      },
+      {
+        "name": "Soured cream",
+        "quantity": 150,
+        "unit": "ml",
+        "aisle": "Dairy & Eggs"
+      },
+      {
+        "name": "Cheddar",
+        "quantity": 100,
+        "unit": "g",
+        "aisle": "Dairy & Eggs"
+      },
+      {
+        "name": "Salsa",
+        "quantity": 1,
+        "unit": "jar",
+        "aisle": "World Foods"
+      }
+    ],
+    "method": [
+      "Slice the chicken, peppers and onion and toss with the seasoning.",
+      "Fry on a high heat for 8 to 10 minutes until the chicken is cooked through.",
+      "Warm the wraps for 20 seconds in the microwave.",
+      "Serve with soured cream, grated cheese and salsa so everyone builds their own."
+    ]
+  },
+  {
+    "name": "Chicken Katsu Curry",
+    "serves": 4,
+    "time": 40,
+    "tags": [
+      "high-carb"
+    ],
+    "ingredients": [
+      {
+        "name": "Chicken breast",
+        "quantity": 500,
+        "unit": "g",
+        "aisle": "Meat & Fish"
+      },
+      {
+        "name": "Breadcrumbs",
+        "quantity": 100,
+        "unit": "g",
+        "aisle": "Baking"
+      },
+      {
+        "name": "Eggs",
+        "quantity": 2,
+        "unit": "",
+        "aisle": "Dairy & Eggs"
+      },
+      {
+        "name": "Plain flour",
+        "quantity": 50,
+        "unit": "g",
+        "aisle": "Baking"
+      },
+      {
+        "name": "Katsu curry sauce",
+        "quantity": 1,
+        "unit": "jar",
+        "aisle": "World Foods"
+      },
+      {
+        "name": "Basmati rice",
+        "quantity": 300,
+        "unit": "g",
+        "aisle": "Pasta, Rice & Grains"
+      },
+      {
+        "name": "Cucumber",
+        "quantity": 1,
+        "unit": "",
+        "aisle": "Fruit & Veg"
+      }
+    ],
+    "method": [
+      "Flatten the chicken, dip in flour, beaten egg, then breadcrumbs.",
+      "Shallow fry for 4 to 5 minutes each side until golden, or bake at 200°C for 25 minutes.",
+      "Cook the rice and warm the katsu sauce.",
+      "Slice the chicken, pour over the sauce and serve with rice and sliced cucumber."
+    ]
+  },
+  {
+    "name": "Beef Burgers and Wedges",
+    "serves": 4,
+    "time": 35,
+    "tags": [
+      "high-carb"
+    ],
+    "ingredients": [
+      {
+        "name": "Beef mince",
+        "quantity": 500,
+        "unit": "g",
+        "aisle": "Meat & Fish"
+      },
+      {
+        "name": "Burger buns",
+        "quantity": 4,
+        "unit": "",
+        "aisle": "Bakery"
+      },
+      {
+        "name": "Potatoes",
+        "quantity": 1000,
+        "unit": "g",
+        "aisle": "Fruit & Veg"
+      },
+      {
+        "name": "Cheddar",
+        "quantity": 100,
+        "unit": "g",
+        "aisle": "Dairy & Eggs"
+      },
+      {
+        "name": "Tomatoes",
+        "quantity": 2,
+        "unit": "",
+        "aisle": "Fruit & Veg"
+      },
+      {
+        "name": "Salad leaves",
+        "quantity": 1,
+        "unit": "bag",
+        "aisle": "Fruit & Veg"
+      },
+      {
+        "name": "Onion",
+        "quantity": 1,
+        "unit": "",
+        "aisle": "Fruit & Veg"
+      }
+    ],
+    "method": [
+      "Cut the potatoes into wedges, toss in oil and roast at 220°C for 30 minutes.",
+      "Season the mince, shape into 4 burgers and fry or grill for 5 minutes each side.",
+      "Top each burger with cheese for the last minute.",
+      "Serve in buns with sliced tomato, onion and salad."
+    ]
+  },
+  {
+    "name": "Creamy Chicken and Bacon Pasta",
+    "serves": 4,
+    "time": 25,
+    "tags": [
+      "quick",
+      "high-carb"
+    ],
+    "ingredients": [
+      {
+        "name": "Chicken breast",
+        "quantity": 400,
+        "unit": "g",
+        "aisle": "Meat & Fish"
+      },
+      {
+        "name": "Smoked bacon",
+        "quantity": 6,
+        "unit": "rashers",
+        "aisle": "Meat & Fish"
+      },
+      {
+        "name": "Penne",
+        "quantity": 400,
+        "unit": "g",
+        "aisle": "Pasta, Rice & Grains"
+      },
+      {
+        "name": "Double cream",
+        "quantity": 200,
+        "unit": "ml",
+        "aisle": "Dairy & Eggs"
+      },
+      {
+        "name": "Garlic",
+        "quantity": 2,
+        "unit": "clove",
+        "aisle": "Fruit & Veg"
+      },
+      {
+        "name": "Parmesan",
+        "quantity": 50,
+        "unit": "g",
+        "aisle": "Dairy & Eggs"
+      },
+      {
+        "name": "Spinach",
+        "quantity": 100,
+        "unit": "g",
+        "aisle": "Fruit & Veg"
+      }
+    ],
+    "method": [
+      "Cook the penne.",
+      "Fry the chopped bacon until crisp, then add the diced chicken and garlic and cook for 8 minutes.",
+      "Stir in the cream and spinach until the spinach wilts.",
+      "Toss with the pasta and parmesan."
+    ]
+  },
+  {
+    "name": "Sweet and Sour Chicken",
+    "serves": 4,
+    "time": 30,
+    "tags": [
+      "quick",
+      "high-carb"
+    ],
+    "ingredients": [
+      {
+        "name": "Chicken breast",
+        "quantity": 500,
+        "unit": "g",
+        "aisle": "Meat & Fish"
+      },
+      {
+        "name": "Red pepper",
+        "quantity": 1,
+        "unit": "",
+        "aisle": "Fruit & Veg"
+      },
+      {
+        "name": "Onion",
+        "quantity": 1,
+        "unit": "",
+        "aisle": "Fruit & Veg"
+      },
+      {
+        "name": "Pineapple chunks",
+        "quantity": 1,
+        "unit": "tin",
+        "aisle": "Tins & Jars"
+      },
+      {
+        "name": "Sweet and sour sauce",
+        "quantity": 1,
+        "unit": "jar",
+        "aisle": "World Foods"
+      },
+      {
+        "name": "Basmati rice",
+        "quantity": 300,
+        "unit": "g",
+        "aisle": "Pasta, Rice & Grains"
+      },
+      {
+        "name": "Cornflour",
+        "quantity": 2,
+        "unit": "tbsp",
+        "aisle": "Baking"
+      }
+    ],
+    "method": [
+      "Toss the diced chicken in cornflour and fry until golden, about 8 minutes.",
+      "Add the chopped pepper and onion and fry for 3 minutes.",
+      "Stir in the drained pineapple and the sauce and bubble for 5 minutes.",
+      "Serve with rice."
+    ]
+  },
+  {
+    "name": "Fish Finger Wraps",
+    "serves": 4,
+    "time": 15,
+    "tags": [
+      "quick"
+    ],
+    "ingredients": [
+      {
+        "name": "Fish fingers",
+        "quantity": 12,
+        "unit": "",
+        "aisle": "Frozen"
+      },
+      {
+        "name": "Tortilla wraps",
+        "quantity": 8,
+        "unit": "",
+        "aisle": "Bakery"
+      },
+      {
+        "name": "Salad leaves",
+        "quantity": 1,
+        "unit": "bag",
+        "aisle": "Fruit & Veg"
+      },
+      {
+        "name": "Tartare sauce",
+        "quantity": 1,
+        "unit": "jar",
+        "aisle": "Tins & Jars"
+      },
+      {
+        "name": "Lemon",
+        "quantity": 1,
+        "unit": "",
+        "aisle": "Fruit & Veg"
+      },
+      {
+        "name": "Frozen peas",
+        "quantity": 200,
+        "unit": "g",
+        "aisle": "Frozen"
+      }
+    ],
+    "method": [
+      "Grill or oven-cook the fish fingers for 12 to 15 minutes.",
+      "Boil the peas for 3 minutes.",
+      "Warm the wraps.",
+      "Fill the wraps with fish fingers, salad, tartare sauce and a squeeze of lemon."
+    ]
+  },
+  {
+    "name": "Sausage Traybake",
+    "serves": 4,
+    "time": 40,
+    "tags": [
+      "batch"
+    ],
+    "ingredients": [
+      {
+        "name": "Pork sausages",
+        "quantity": 8,
+        "unit": "",
+        "aisle": "Meat & Fish"
+      },
+      {
+        "name": "New potatoes",
+        "quantity": 750,
+        "unit": "g",
+        "aisle": "Fruit & Veg"
+      },
+      {
+        "name": "Red pepper",
+        "quantity": 2,
+        "unit": "",
+        "aisle": "Fruit & Veg"
+      },
+      {
+        "name": "Red onion",
+        "quantity": 2,
+        "unit": "",
+        "aisle": "Fruit & Veg"
+      },
+      {
+        "name": "Courgette",
+        "quantity": 1,
+        "unit": "",
+        "aisle": "Fruit & Veg"
+      },
+      {
+        "name": "Wholegrain mustard",
+        "quantity": 1,
+        "unit": "tbsp",
+        "aisle": "Tins & Jars"
+      },
+      {
+        "name": "Honey",
+        "quantity": 1,
+        "unit": "tbsp",
+        "aisle": "Baking"
+      }
+    ],
+    "method": [
+      "Halve the potatoes and chop the veg into chunks. Toss everything with oil on a large tray.",
+      "Nestle in the sausages and roast at 200°C for 30 minutes.",
+      "Mix the honey and mustard, drizzle over, and roast for 10 more minutes."
+    ]
+  },
+  {
+    "name": "Chicken Tikka Masala",
+    "serves": 4,
+    "time": 45,
+    "tags": [
+      "high-carb",
+      "batch"
+    ],
+    "ingredients": [
+      {
+        "name": "Chicken breast",
+        "quantity": 600,
+        "unit": "g",
+        "aisle": "Meat & Fish"
+      },
+      {
+        "name": "Natural yoghurt",
+        "quantity": 150,
+        "unit": "g",
+        "aisle": "Dairy & Eggs"
+      },
+      {
+        "name": "Tikka masala paste",
+        "quantity": 1,
+        "unit": "jar",
+        "aisle": "Tins & Jars"
+      },
+      {
+        "name": "Onion",
+        "quantity": 1,
+        "unit": "",
+        "aisle": "Fruit & Veg"
+      },
+      {
+        "name": "Garlic",
+        "quantity": 2,
+        "unit": "clove",
+        "aisle": "Fruit & Veg"
+      },
+      {
+        "name": "Chopped tomatoes",
+        "quantity": 1,
+        "unit": "tin",
+        "aisle": "Tins & Jars"
+      },
+      {
+        "name": "Double cream",
+        "quantity": 100,
+        "unit": "ml",
+        "aisle": "Dairy & Eggs"
+      },
+      {
+        "name": "Basmati rice",
+        "quantity": 300,
+        "unit": "g",
+        "aisle": "Pasta, Rice & Grains"
+      },
+      {
+        "name": "Naan bread",
+        "quantity": 2,
+        "unit": "",
+        "aisle": "Bakery"
+      }
+    ],
+    "method": [
+      "Marinate the diced chicken in yoghurt and half the paste for 10 minutes, then grill or fry until charred.",
+      "Fry the onion and garlic, add the rest of the paste and the tomatoes, and simmer for 15 minutes.",
+      "Add the chicken and cream and simmer for 5 minutes.",
+      "Serve with rice and warm naan."
+    ]
+  },
+  {
+    "name": "Lasagne",
+    "serves": 4,
+    "time": 75,
+    "tags": [
+      "batch",
+      "high-carb"
+    ],
+    "ingredients": [
+      {
+        "name": "Beef mince",
+        "quantity": 500,
+        "unit": "g",
+        "aisle": "Meat & Fish"
+      },
+      {
+        "name": "Onion",
+        "quantity": 1,
+        "unit": "",
+        "aisle": "Fruit & Veg"
+      },
+      {
+        "name": "Garlic",
+        "quantity": 2,
+        "unit": "clove",
+        "aisle": "Fruit & Veg"
+      },
+      {
+        "name": "Chopped tomatoes",
+        "quantity": 2,
+        "unit": "tin",
+        "aisle": "Tins & Jars"
+      },
+      {
+        "name": "Tomato purée",
+        "quantity": 2,
+        "unit": "tbsp",
+        "aisle": "Tins & Jars"
+      },
+      {
+        "name": "Lasagne sheets",
+        "quantity": 250,
+        "unit": "g",
+        "aisle": "Pasta, Rice & Grains"
+      },
+      {
+        "name": "White sauce",
+        "quantity": 1,
+        "unit": "jar",
+        "aisle": "Tins & Jars"
+      },
+      {
+        "name": "Cheddar",
+        "quantity": 100,
+        "unit": "g",
+        "aisle": "Dairy & Eggs"
+      },
+      {
+        "name": "Salad leaves",
+        "quantity": 1,
+        "unit": "bag",
+        "aisle": "Fruit & Veg"
+      }
+    ],
+    "method": [
+      "Brown the mince with the onion and garlic, add the tomatoes and purée and simmer for 20 minutes.",
+      "Layer mince, lasagne sheets and white sauce in a dish, finishing with sauce and grated cheese.",
+      "Bake at 180°C for 40 minutes.",
+      "Serve with salad."
+    ]
+  },
+  {
+    "name": "Pesto Pasta with Chicken",
+    "serves": 4,
+    "time": 20,
+    "tags": [
+      "quick",
+      "high-carb"
+    ],
+    "ingredients": [
+      {
+        "name": "Chicken breast",
+        "quantity": 400,
+        "unit": "g",
+        "aisle": "Meat & Fish"
+      },
+      {
+        "name": "Fusilli",
+        "quantity": 400,
+        "unit": "g",
+        "aisle": "Pasta, Rice & Grains"
+      },
+      {
+        "name": "Green pesto",
+        "quantity": 1,
+        "unit": "jar",
+        "aisle": "Tins & Jars"
+      },
+      {
+        "name": "Cherry tomatoes",
+        "quantity": 250,
+        "unit": "g",
+        "aisle": "Fruit & Veg"
+      },
+      {
+        "name": "Parmesan",
+        "quantity": 50,
+        "unit": "g",
+        "aisle": "Dairy & Eggs"
+      },
+      {
+        "name": "Pine nuts",
+        "quantity": 30,
+        "unit": "g",
+        "aisle": "Baking"
+      }
+    ],
+    "method": [
+      "Cook the fusilli.",
+      "Fry the diced chicken for 8 minutes until cooked.",
+      "Add the halved tomatoes for 2 minutes.",
+      "Toss everything with the pesto, parmesan and pine nuts."
+    ]
+  },
+  {
+    "name": "Tuna Pasta Bake",
+    "serves": 4,
+    "time": 35,
+    "tags": [
+      "batch",
+      "high-carb"
+    ],
+    "ingredients": [
+      {
+        "name": "Penne",
+        "quantity": 400,
+        "unit": "g",
+        "aisle": "Pasta, Rice & Grains"
+      },
+      {
+        "name": "Tuna",
+        "quantity": 2,
+        "unit": "tin",
+        "aisle": "Tins & Jars"
+      },
+      {
+        "name": "Sweetcorn",
+        "quantity": 1,
+        "unit": "tin",
+        "aisle": "Tins & Jars"
+      },
+      {
+        "name": "White sauce",
+        "quantity": 1,
+        "unit": "jar",
+        "aisle": "Tins & Jars"
+      },
+      {
+        "name": "Cheddar",
+        "quantity": 150,
+        "unit": "g",
+        "aisle": "Dairy & Eggs"
+      },
+      {
+        "name": "Onion",
+        "quantity": 1,
+        "unit": "",
+        "aisle": "Fruit & Veg"
+      }
+    ],
+    "method": [
+      "Cook the penne and drain.",
+      "Soften the chopped onion, then mix with the pasta, drained tuna, sweetcorn and white sauce.",
+      "Tip into a dish, top with cheese and bake at 200°C for 20 minutes."
+    ]
+  },
+  {
+    "name": "Chicken and Chorizo Jambalaya",
+    "serves": 4,
+    "time": 40,
+    "tags": [
+      "high-carb",
+      "batch"
+    ],
+    "ingredients": [
+      {
+        "name": "Chicken breast",
+        "quantity": 400,
+        "unit": "g",
+        "aisle": "Meat & Fish"
+      },
+      {
+        "name": "Chorizo",
+        "quantity": 150,
+        "unit": "g",
+        "aisle": "Meat & Fish"
+      },
+      {
+        "name": "Onion",
+        "quantity": 1,
+        "unit": "",
+        "aisle": "Fruit & Veg"
+      },
+      {
+        "name": "Red pepper",
+        "quantity": 1,
+        "unit": "",
+        "aisle": "Fruit & Veg"
+      },
+      {
+        "name": "Garlic",
+        "quantity": 2,
+        "unit": "clove",
+        "aisle": "Fruit & Veg"
+      },
+      {
+        "name": "Basmati rice",
+        "quantity": 300,
+        "unit": "g",
+        "aisle": "Pasta, Rice & Grains"
+      },
+      {
+        "name": "Chopped tomatoes",
+        "quantity": 1,
+        "unit": "tin",
+        "aisle": "Tins & Jars"
+      },
+      {
+        "name": "Chicken stock cube",
+        "quantity": 1,
+        "unit": "",
+        "aisle": "Tins & Jars"
+      },
+      {
+        "name": "Cajun seasoning",
+        "quantity": 1,
+        "unit": "tbsp",
+        "aisle": "Herbs & Spices"
+      }
+    ],
+    "method": [
+      "Fry the sliced chorizo until the oil runs, then brown the diced chicken.",
+      "Add the onion, pepper, garlic and Cajun seasoning and cook for 5 minutes.",
+      "Stir in the rice, tomatoes and 600ml stock. Cover and simmer for 20 minutes until the rice is tender."
+    ]
+  },
+  {
+    "name": "Toad in the Hole",
+    "serves": 4,
+    "time": 50,
+    "tags": [
+      "batch"
+    ],
+    "ingredients": [
+      {
+        "name": "Pork sausages",
+        "quantity": 8,
+        "unit": "",
+        "aisle": "Meat & Fish"
+      },
+      {
+        "name": "Plain flour",
+        "quantity": 125,
+        "unit": "g",
+        "aisle": "Baking"
+      },
+      {
+        "name": "Eggs",
+        "quantity": 3,
+        "unit": "",
+        "aisle": "Dairy & Eggs"
+      },
+      {
+        "name": "Milk",
+        "quantity": 300,
+        "unit": "ml",
+        "aisle": "Dairy & Eggs"
+      },
+      {
+        "name": "Gravy granules",
+        "quantity": 1,
+        "unit": "tub",
+        "aisle": "Tins & Jars"
+      },
+      {
+        "name": "Frozen peas",
+        "quantity": 200,
+        "unit": "g",
+        "aisle": "Frozen"
+      },
+      {
+        "name": "Carrot",
+        "quantity": 3,
+        "unit": "",
+        "aisle": "Fruit & Veg"
+      }
+    ],
+    "method": [
+      "Brown the sausages in a roasting tin with 2 tbsp oil at 220°C for 10 minutes.",
+      "Whisk the flour, eggs and milk into a smooth batter.",
+      "Pour the batter around the hot sausages and bake for 30 minutes without opening the door.",
+      "Boil the carrots and peas and make up the gravy."
+    ]
+  },
+  {
+    "name": "Prawn Stir-fry with Rice",
+    "serves": 4,
+    "time": 20,
+    "tags": [
+      "quick",
+      "high-carb"
+    ],
+    "ingredients": [
+      {
+        "name": "King prawns",
+        "quantity": 300,
+        "unit": "g",
+        "aisle": "Frozen"
+      },
+      {
+        "name": "Stir-fry vegetables",
+        "quantity": 2,
+        "unit": "pack",
+        "aisle": "Fruit & Veg"
+      },
+      {
+        "name": "Garlic",
+        "quantity": 2,
+        "unit": "clove",
+        "aisle": "Fruit & Veg"
+      },
+      {
+        "name": "Ginger",
+        "quantity": 1,
+        "unit": "thumb",
+        "aisle": "Fruit & Veg"
+      },
+      {
+        "name": "Soy sauce",
+        "quantity": 3,
+        "unit": "tbsp",
+        "aisle": "World Foods"
+      },
+      {
+        "name": "Sweet chilli sauce",
+        "quantity": 2,
+        "unit": "tbsp",
+        "aisle": "World Foods"
+      },
+      {
+        "name": "Basmati rice",
+        "quantity": 300,
+        "unit": "g",
+        "aisle": "Pasta, Rice & Grains"
+      }
+    ],
+    "method": [
+      "Cook the rice.",
+      "Fry the garlic and grated ginger for 30 seconds, add the prawns and cook for 2 minutes.",
+      "Add the vegetables and stir-fry on a high heat for 4 minutes.",
+      "Add the soy and sweet chilli sauce, toss and serve with rice."
+    ]
+  },
+  {
+    "name": "Cottage Pie",
+    "serves": 4,
+    "time": 60,
+    "tags": [
+      "batch"
+    ],
+    "ingredients": [
+      {
+        "name": "Beef mince",
+        "quantity": 500,
+        "unit": "g",
+        "aisle": "Meat & Fish"
+      },
+      {
+        "name": "Potatoes",
+        "quantity": 1000,
+        "unit": "g",
+        "aisle": "Fruit & Veg"
+      },
+      {
+        "name": "Onion",
+        "quantity": 1,
+        "unit": "",
+        "aisle": "Fruit & Veg"
+      },
+      {
+        "name": "Carrot",
+        "quantity": 2,
+        "unit": "",
+        "aisle": "Fruit & Veg"
+      },
+      {
+        "name": "Frozen peas",
+        "quantity": 150,
+        "unit": "g",
+        "aisle": "Frozen"
+      },
+      {
+        "name": "Beef stock cube",
+        "quantity": 1,
+        "unit": "",
+        "aisle": "Tins & Jars"
+      },
+      {
+        "name": "Tomato purée",
+        "quantity": 1,
+        "unit": "tbsp",
+        "aisle": "Tins & Jars"
+      },
+      {
+        "name": "Butter",
+        "quantity": 50,
+        "unit": "g",
+        "aisle": "Dairy & Eggs"
+      },
+      {
+        "name": "Milk",
+        "quantity": 100,
+        "unit": "ml",
+        "aisle": "Dairy & Eggs"
+      }
+    ],
+    "method": [
+      "Boil the peeled, chopped potatoes for 15 minutes, then mash with the butter and milk.",
+      "Brown the mince with the onion and carrot, add the purée, crumbled stock cube and 300ml water. Simmer 15 minutes, then stir in the peas.",
+      "Top with mash and bake at 200°C for 20 minutes."
+    ]
+  },
+  {
+    "name": "Honey Garlic Chicken Thighs",
+    "serves": 4,
+    "time": 45,
+    "tags": [
+      "high-carb"
+    ],
+    "ingredients": [
+      {
+        "name": "Chicken thighs",
+        "quantity": 8,
+        "unit": "",
+        "aisle": "Meat & Fish"
+      },
+      {
+        "name": "Honey",
+        "quantity": 3,
+        "unit": "tbsp",
+        "aisle": "Baking"
+      },
+      {
+        "name": "Garlic",
+        "quantity": 3,
+        "unit": "clove",
+        "aisle": "Fruit & Veg"
+      },
+      {
+        "name": "Soy sauce",
+        "quantity": 2,
+        "unit": "tbsp",
+        "aisle": "World Foods"
+      },
+      {
+        "name": "Basmati rice",
+        "quantity": 300,
+        "unit": "g",
+        "aisle": "Pasta, Rice & Grains"
+      },
+      {
+        "name": "Broccoli",
+        "quantity": 1,
+        "unit": "head",
+        "aisle": "Fruit & Veg"
+      }
+    ],
+    "method": [
+      "Mix the honey, crushed garlic and soy sauce and coat the thighs.",
+      "Roast at 200°C for 35 to 40 minutes, basting once.",
+      "Cook the rice and steam the broccoli.",
+      "Spoon the sticky juices over the chicken to serve."
+    ]
+  },
+  {
+    "name": "Halloumi and Veg Traybake",
+    "serves": 4,
+    "time": 35,
+    "tags": [
+      "vegetarian",
+      "quick"
+    ],
+    "ingredients": [
+      {
+        "name": "Halloumi",
+        "quantity": 2,
+        "unit": "block",
+        "aisle": "Dairy & Eggs"
+      },
+      {
+        "name": "Red pepper",
+        "quantity": 2,
+        "unit": "",
+        "aisle": "Fruit & Veg"
+      },
+      {
+        "name": "Courgette",
+        "quantity": 1,
+        "unit": "",
+        "aisle": "Fruit & Veg"
+      },
+      {
+        "name": "Red onion",
+        "quantity": 1,
+        "unit": "",
+        "aisle": "Fruit & Veg"
+      },
+      {
+        "name": "Cherry tomatoes",
+        "quantity": 250,
+        "unit": "g",
+        "aisle": "Fruit & Veg"
+      },
+      {
+        "name": "Couscous",
+        "quantity": 250,
+        "unit": "g",
+        "aisle": "Pasta, Rice & Grains"
+      },
+      {
+        "name": "Lemon",
+        "quantity": 1,
+        "unit": "",
+        "aisle": "Fruit & Veg"
+      },
+      {
+        "name": "Mixed herbs",
+        "quantity": 1,
+        "unit": "tsp",
+        "aisle": "Herbs & Spices"
+      }
+    ],
+    "method": [
+      "Chop the veg into chunks, toss with oil and herbs and roast at 200°C for 20 minutes.",
+      "Add the sliced halloumi and roast for 10 more minutes until golden.",
+      "Make the couscous with boiling water and a squeeze of lemon.",
+      "Serve the traybake over the couscous."
+    ]
+  },
+  {
+    "name": "Chicken Noodle Soup",
+    "serves": 4,
+    "time": 30,
+    "tags": [
+      "quick"
+    ],
+    "ingredients": [
+      {
+        "name": "Chicken breast",
+        "quantity": 300,
+        "unit": "g",
+        "aisle": "Meat & Fish"
+      },
+      {
+        "name": "Egg noodles",
+        "quantity": 200,
+        "unit": "g",
+        "aisle": "Pasta, Rice & Grains"
+      },
+      {
+        "name": "Carrot",
+        "quantity": 2,
+        "unit": "",
+        "aisle": "Fruit & Veg"
+      },
+      {
+        "name": "Sweetcorn",
+        "quantity": 1,
+        "unit": "tin",
+        "aisle": "Tins & Jars"
+      },
+      {
+        "name": "Chicken stock cube",
+        "quantity": 2,
+        "unit": "",
+        "aisle": "Tins & Jars"
+      },
+      {
+        "name": "Spring onions",
+        "quantity": 1,
+        "unit": "bunch",
+        "aisle": "Fruit & Veg"
+      },
+      {
+        "name": "Soy sauce",
+        "quantity": 1,
+        "unit": "tbsp",
+        "aisle": "World Foods"
+      }
+    ],
+    "method": [
+      "Bring 1.2 litres of stock to the boil with the diced carrot.",
+      "Add the diced chicken and simmer for 10 minutes.",
+      "Add the noodles and sweetcorn and cook for 4 minutes.",
+      "Finish with soy sauce and sliced spring onions."
+    ]
+  },
+  {
+    "name": "Quesadillas and Salad",
+    "serves": 4,
+    "time": 15,
+    "tags": [
+      "quick",
+      "vegetarian"
+    ],
+    "ingredients": [
+      {
+        "name": "Tortilla wraps",
+        "quantity": 8,
+        "unit": "",
+        "aisle": "Bakery"
+      },
+      {
+        "name": "Cheddar",
+        "quantity": 200,
+        "unit": "g",
+        "aisle": "Dairy & Eggs"
+      },
+      {
+        "name": "Black beans",
+        "quantity": 1,
+        "unit": "tin",
+        "aisle": "Tins & Jars"
+      },
+      {
+        "name": "Sweetcorn",
+        "quantity": 1,
+        "unit": "tin",
+        "aisle": "Tins & Jars"
+      },
+      {
+        "name": "Spring onions",
+        "quantity": 1,
+        "unit": "bunch",
+        "aisle": "Fruit & Veg"
+      },
+      {
+        "name": "Salsa",
+        "quantity": 1,
+        "unit": "jar",
+        "aisle": "World Foods"
+      },
+      {
+        "name": "Salad leaves",
+        "quantity": 1,
+        "unit": "bag",
+        "aisle": "Fruit & Veg"
+      }
+    ],
+    "method": [
+      "Mix the grated cheese, drained beans, sweetcorn and sliced spring onions.",
+      "Spread over half of each wrap, fold over and fry in a dry pan for 2 to 3 minutes each side until crisp.",
+      "Cut into wedges and serve with salsa and salad."
+    ]
+  },
+  {
+    "name": "Slow-cooker Beef Stew",
+    "serves": 4,
+    "time": 30,
+    "tags": [
+      "batch"
+    ],
+    "ingredients": [
+      {
+        "name": "Stewing beef",
+        "quantity": 600,
+        "unit": "g",
+        "aisle": "Meat & Fish"
+      },
+      {
+        "name": "Potatoes",
+        "quantity": 750,
+        "unit": "g",
+        "aisle": "Fruit & Veg"
+      },
+      {
+        "name": "Carrot",
+        "quantity": 3,
+        "unit": "",
+        "aisle": "Fruit & Veg"
+      },
+      {
+        "name": "Onion",
+        "quantity": 1,
+        "unit": "",
+        "aisle": "Fruit & Veg"
+      },
+      {
+        "name": "Beef stock cube",
+        "quantity": 2,
+        "unit": "",
+        "aisle": "Tins & Jars"
+      },
+      {
+        "name": "Tomato purée",
+        "quantity": 1,
+        "unit": "tbsp",
+        "aisle": "Tins & Jars"
+      },
+      {
+        "name": "Plain flour",
+        "quantity": 2,
+        "unit": "tbsp",
+        "aisle": "Baking"
+      },
+      {
+        "name": "Crusty bread",
+        "quantity": 1,
+        "unit": "loaf",
+        "aisle": "Bakery"
+      }
+    ],
+    "method": [
+      "Toss the beef in flour and brown in batches (or skip if short of time).",
+      "Put everything except the bread in the slow cooker with 600ml stock. Cook on low for 8 hours or high for 4.",
+      "Serve with crusty bread. The 30 minutes is hands-on time."
+    ]
+  },
+  {
+    "name": "Salmon Teriyaki Noodles",
+    "serves": 4,
+    "time": 20,
+    "tags": [
+      "quick",
+      "high-carb"
+    ],
+    "ingredients": [
+      {
+        "name": "Salmon fillets",
+        "quantity": 4,
+        "unit": "",
+        "aisle": "Meat & Fish"
+      },
+      {
+        "name": "Egg noodles",
+        "quantity": 300,
+        "unit": "g",
+        "aisle": "Pasta, Rice & Grains"
+      },
+      {
+        "name": "Teriyaki sauce",
+        "quantity": 4,
+        "unit": "tbsp",
+        "aisle": "World Foods"
+      },
+      {
+        "name": "Tenderstem broccoli",
+        "quantity": 200,
+        "unit": "g",
+        "aisle": "Fruit & Veg"
+      },
+      {
+        "name": "Spring onions",
+        "quantity": 1,
+        "unit": "bunch",
+        "aisle": "Fruit & Veg"
+      },
+      {
+        "name": "Sesame seeds",
+        "quantity": 1,
+        "unit": "tbsp",
+        "aisle": "Baking"
+      }
+    ],
+    "method": [
+      "Brush the salmon with half the teriyaki and bake at 200°C for 12 minutes.",
+      "Cook the noodles, adding the broccoli for the last 3 minutes.",
+      "Toss the noodles with the rest of the sauce.",
+      "Top with the salmon, spring onions and sesame seeds."
+    ]
+  },
+  {
+    "name": "Meatballs in Tomato Sauce",
+    "serves": 4,
+    "time": 40,
+    "tags": [
+      "batch",
+      "high-carb"
+    ],
+    "ingredients": [
+      {
+        "name": "Beef mince",
+        "quantity": 500,
+        "unit": "g",
+        "aisle": "Meat & Fish"
+      },
+      {
+        "name": "Breadcrumbs",
+        "quantity": 50,
+        "unit": "g",
+        "aisle": "Baking"
+      },
+      {
+        "name": "Eggs",
+        "quantity": 1,
+        "unit": "",
+        "aisle": "Dairy & Eggs"
+      },
+      {
+        "name": "Onion",
+        "quantity": 1,
+        "unit": "",
+        "aisle": "Fruit & Veg"
+      },
+      {
+        "name": "Garlic",
+        "quantity": 2,
+        "unit": "clove",
+        "aisle": "Fruit & Veg"
+      },
+      {
+        "name": "Chopped tomatoes",
+        "quantity": 2,
+        "unit": "tin",
+        "aisle": "Tins & Jars"
+      },
+      {
+        "name": "Spaghetti",
+        "quantity": 400,
+        "unit": "g",
+        "aisle": "Pasta, Rice & Grains"
+      },
+      {
+        "name": "Parmesan",
+        "quantity": 50,
+        "unit": "g",
+        "aisle": "Dairy & Eggs"
+      }
+    ],
+    "method": [
+      "Mix the mince, breadcrumbs, egg and seasoning and roll into 16 meatballs. Brown in a pan.",
+      "Fry the onion and garlic, add the tomatoes and meatballs, and simmer for 20 minutes.",
+      "Cook the spaghetti and serve with parmesan."
+    ]
+  },
+  {
+    "name": "Thai Green Chicken Curry",
+    "serves": 4,
+    "time": 30,
+    "tags": [
+      "quick",
+      "high-carb"
+    ],
+    "ingredients": [
+      {
+        "name": "Chicken breast",
+        "quantity": 500,
+        "unit": "g",
+        "aisle": "Meat & Fish"
+      },
+      {
+        "name": "Thai green curry paste",
+        "quantity": 3,
+        "unit": "tbsp",
+        "aisle": "World Foods"
+      },
+      {
+        "name": "Coconut milk",
+        "quantity": 1,
+        "unit": "tin",
+        "aisle": "Tins & Jars"
+      },
+      {
+        "name": "Green beans",
+        "quantity": 150,
+        "unit": "g",
+        "aisle": "Fruit & Veg"
+      },
+      {
+        "name": "Red pepper",
+        "quantity": 1,
+        "unit": "",
+        "aisle": "Fruit & Veg"
+      },
+      {
+        "name": "Jasmine rice",
+        "quantity": 300,
+        "unit": "g",
+        "aisle": "Pasta, Rice & Grains"
+      },
+      {
+        "name": "Lime",
+        "quantity": 1,
+        "unit": "",
+        "aisle": "Fruit & Veg"
+      }
+    ],
+    "method": [
+      "Fry the paste for 1 minute, add the sliced chicken and cook for 5 minutes.",
+      "Pour in the coconut milk, add the pepper and beans, and simmer for 12 minutes.",
+      "Cook the rice.",
+      "Finish with a squeeze of lime."
+    ]
+  },
+  {
+    "name": "Baked Potato Skins with Chilli",
+    "serves": 4,
+    "time": 50,
+    "tags": [
+      "batch"
+    ],
+    "ingredients": [
+      {
+        "name": "Baking potatoes",
+        "quantity": 4,
+        "unit": "",
+        "aisle": "Fruit & Veg"
+      },
+      {
+        "name": "Beef mince",
+        "quantity": 400,
+        "unit": "g",
+        "aisle": "Meat & Fish"
+      },
+      {
+        "name": "Kidney beans",
+        "quantity": 1,
+        "unit": "tin",
+        "aisle": "Tins & Jars"
+      },
+      {
+        "name": "Chopped tomatoes",
+        "quantity": 1,
+        "unit": "tin",
+        "aisle": "Tins & Jars"
+      },
+      {
+        "name": "Onion",
+        "quantity": 1,
+        "unit": "",
+        "aisle": "Fruit & Veg"
+      },
+      {
+        "name": "Chilli powder",
+        "quantity": 1,
+        "unit": "tsp",
+        "aisle": "Herbs & Spices"
+      },
+      {
+        "name": "Cheddar",
+        "quantity": 100,
+        "unit": "g",
+        "aisle": "Dairy & Eggs"
+      },
+      {
+        "name": "Soured cream",
+        "quantity": 150,
+        "unit": "ml",
+        "aisle": "Dairy & Eggs"
+      }
+    ],
+    "method": [
+      "Microwave the potatoes for 10 minutes, then crisp in the oven at 200°C for 15.",
+      "Brown the mince and onion, add the chilli powder, tomatoes and beans, and simmer for 20 minutes.",
+      "Split the potatoes, pile on the chilli, top with cheese and soured cream."
+    ]
+  },
+  {
+    "name": "Pork Schnitzel with Potato Salad",
+    "serves": 4,
+    "time": 35,
+    "tags": [],
+    "ingredients": [
+      {
+        "name": "Pork loin steaks",
+        "quantity": 4,
+        "unit": "",
+        "aisle": "Meat & Fish"
+      },
+      {
+        "name": "Breadcrumbs",
+        "quantity": 100,
+        "unit": "g",
+        "aisle": "Baking"
+      },
+      {
+        "name": "Eggs",
+        "quantity": 2,
+        "unit": "",
+        "aisle": "Dairy & Eggs"
+      },
+      {
+        "name": "Plain flour",
+        "quantity": 50,
+        "unit": "g",
+        "aisle": "Baking"
+      },
+      {
+        "name": "New potatoes",
+        "quantity": 750,
+        "unit": "g",
+        "aisle": "Fruit & Veg"
+      },
+      {
+        "name": "Mayonnaise",
+        "quantity": 3,
+        "unit": "tbsp",
+        "aisle": "Tins & Jars"
+      },
+      {
+        "name": "Spring onions",
+        "quantity": 1,
+        "unit": "bunch",
+        "aisle": "Fruit & Veg"
+      },
+      {
+        "name": "Lemon",
+        "quantity": 1,
+        "unit": "",
+        "aisle": "Fruit & Veg"
+      }
+    ],
+    "method": [
+      "Boil the potatoes for 15 minutes, cool slightly, then mix with mayonnaise and sliced spring onions.",
+      "Bash the pork thin, coat in flour, egg and breadcrumbs.",
+      "Fry for 3 to 4 minutes each side until golden.",
+      "Serve with the potato salad and lemon wedges."
+    ]
+  },
+  {
+    "name": "Veggie Chilli",
+    "serves": 4,
+    "time": 40,
+    "tags": [
+      "vegetarian",
+      "batch",
+      "high-carb"
+    ],
+    "ingredients": [
+      {
+        "name": "Onion",
+        "quantity": 1,
+        "unit": "",
+        "aisle": "Fruit & Veg"
+      },
+      {
+        "name": "Red pepper",
+        "quantity": 1,
+        "unit": "",
+        "aisle": "Fruit & Veg"
+      },
+      {
+        "name": "Garlic",
+        "quantity": 2,
+        "unit": "clove",
+        "aisle": "Fruit & Veg"
+      },
+      {
+        "name": "Kidney beans",
+        "quantity": 1,
+        "unit": "tin",
+        "aisle": "Tins & Jars"
+      },
+      {
+        "name": "Black beans",
+        "quantity": 1,
+        "unit": "tin",
+        "aisle": "Tins & Jars"
+      },
+      {
+        "name": "Chopped tomatoes",
+        "quantity": 2,
+        "unit": "tin",
+        "aisle": "Tins & Jars"
+      },
+      {
+        "name": "Sweetcorn",
+        "quantity": 1,
+        "unit": "tin",
+        "aisle": "Tins & Jars"
+      },
+      {
+        "name": "Chilli powder",
+        "quantity": 2,
+        "unit": "tsp",
+        "aisle": "Herbs & Spices"
+      },
+      {
+        "name": "Basmati rice",
+        "quantity": 300,
+        "unit": "g",
+        "aisle": "Pasta, Rice & Grains"
+      },
+      {
+        "name": "Soured cream",
+        "quantity": 150,
+        "unit": "ml",
+        "aisle": "Dairy & Eggs"
+      }
+    ],
+    "method": [
+      "Fry the onion, pepper and garlic for 5 minutes, add the chilli powder.",
+      "Add the drained beans, sweetcorn and tomatoes and simmer for 25 minutes.",
+      "Serve with rice and soured cream."
+    ]
+  },
+  {
+    "name": "Chicken Caesar Wraps",
+    "serves": 4,
+    "time": 20,
+    "tags": [
+      "quick"
+    ],
+    "ingredients": [
+      {
+        "name": "Chicken breast",
+        "quantity": 400,
+        "unit": "g",
+        "aisle": "Meat & Fish"
+      },
+      {
+        "name": "Tortilla wraps",
+        "quantity": 8,
+        "unit": "",
+        "aisle": "Bakery"
+      },
+      {
+        "name": "Romaine lettuce",
+        "quantity": 1,
+        "unit": "",
+        "aisle": "Fruit & Veg"
+      },
+      {
+        "name": "Caesar dressing",
+        "quantity": 1,
+        "unit": "bottle",
+        "aisle": "Tins & Jars"
+      },
+      {
+        "name": "Parmesan",
+        "quantity": 50,
+        "unit": "g",
+        "aisle": "Dairy & Eggs"
+      },
+      {
+        "name": "Smoked bacon",
+        "quantity": 4,
+        "unit": "rashers",
+        "aisle": "Meat & Fish"
+      }
+    ],
+    "method": [
+      "Fry the bacon until crisp and the sliced chicken for 8 minutes.",
+      "Shred the lettuce and toss with dressing and parmesan.",
+      "Fill the wraps with everything and roll up."
+    ]
+  },
+  {
+    "name": "Pizza Night",
+    "serves": 4,
+    "time": 25,
+    "tags": [
+      "quick",
+      "vegetarian",
+      "high-carb"
+    ],
+    "ingredients": [
+      {
+        "name": "Pizza bases",
+        "quantity": 2,
+        "unit": "",
+        "aisle": "Bakery"
+      },
+      {
+        "name": "Passata",
+        "quantity": 1,
+        "unit": "carton",
+        "aisle": "Tins & Jars"
+      },
+      {
+        "name": "Mozzarella",
+        "quantity": 2,
+        "unit": "ball",
+        "aisle": "Dairy & Eggs"
+      },
+      {
+        "name": "Red pepper",
+        "quantity": 1,
+        "unit": "",
+        "aisle": "Fruit & Veg"
+      },
+      {
+        "name": "Mushrooms",
+        "quantity": 150,
+        "unit": "g",
+        "aisle": "Fruit & Veg"
+      },
+      {
+        "name": "Sweetcorn",
+        "quantity": 1,
+        "unit": "tin",
+        "aisle": "Tins & Jars"
+      },
+      {
+        "name": "Mixed herbs",
+        "quantity": 1,
+        "unit": "tsp",
+        "aisle": "Herbs & Spices"
+      },
+      {
+        "name": "Salad leaves",
+        "quantity": 1,
+        "unit": "bag",
+        "aisle": "Fruit & Veg"
+      }
+    ],
+    "method": [
+      "Spread passata over the bases and scatter with herbs.",
+      "Top with torn mozzarella and whichever toppings each person wants.",
+      "Bake at 220°C for 12 to 15 minutes. Serve with salad."
+    ]
+  },
+  {
+    "name": "Chicken and Leek Pie",
+    "serves": 4,
+    "time": 55,
+    "tags": [
+      "batch"
+    ],
+    "ingredients": [
+      {
+        "name": "Chicken breast",
+        "quantity": 500,
+        "unit": "g",
+        "aisle": "Meat & Fish"
+      },
+      {
+        "name": "Leeks",
+        "quantity": 2,
+        "unit": "",
+        "aisle": "Fruit & Veg"
+      },
+      {
+        "name": "Puff pastry",
+        "quantity": 1,
+        "unit": "sheet",
+        "aisle": "Frozen"
+      },
+      {
+        "name": "Double cream",
+        "quantity": 150,
+        "unit": "ml",
+        "aisle": "Dairy & Eggs"
+      },
+      {
+        "name": "Chicken stock cube",
+        "quantity": 1,
+        "unit": "",
+        "aisle": "Tins & Jars"
+      },
+      {
+        "name": "Plain flour",
+        "quantity": 1,
+        "unit": "tbsp",
+        "aisle": "Baking"
+      },
+      {
+        "name": "Eggs",
+        "quantity": 1,
+        "unit": "",
+        "aisle": "Dairy & Eggs"
+      },
+      {
+        "name": "Frozen peas",
+        "quantity": 200,
+        "unit": "g",
+        "aisle": "Frozen"
+      },
+      {
+        "name": "Potatoes",
+        "quantity": 1000,
+        "unit": "g",
+        "aisle": "Fruit & Veg"
+      }
+    ],
+    "method": [
+      "Fry the sliced leeks and diced chicken for 8 minutes. Stir in the flour, then 200ml stock and the cream. Simmer for 5 minutes.",
+      "Tip into a pie dish, top with pastry, brush with beaten egg and bake at 200°C for 25 minutes.",
+      "Serve with mash and peas."
+    ]
+  },
+  {
+    "name": "Egg Fried Rice with Veg",
+    "serves": 4,
+    "time": 15,
+    "tags": [
+      "quick",
+      "vegetarian",
+      "high-carb"
+    ],
+    "ingredients": [
+      {
+        "name": "Basmati rice",
+        "quantity": 300,
+        "unit": "g",
+        "aisle": "Pasta, Rice & Grains"
+      },
+      {
+        "name": "Eggs",
+        "quantity": 4,
+        "unit": "",
+        "aisle": "Dairy & Eggs"
+      },
+      {
+        "name": "Frozen peas",
+        "quantity": 150,
+        "unit": "g",
+        "aisle": "Frozen"
+      },
+      {
+        "name": "Sweetcorn",
+        "quantity": 1,
+        "unit": "tin",
+        "aisle": "Tins & Jars"
+      },
+      {
+        "name": "Spring onions",
+        "quantity": 1,
+        "unit": "bunch",
+        "aisle": "Fruit & Veg"
+      },
+      {
+        "name": "Soy sauce",
+        "quantity": 3,
+        "unit": "tbsp",
+        "aisle": "World Foods"
+      },
+      {
+        "name": "Garlic",
+        "quantity": 2,
+        "unit": "clove",
+        "aisle": "Fruit & Veg"
+      }
+    ],
+    "method": [
+      "Cook the rice (or use leftover cold rice, which works best).",
+      "Scramble the eggs in a large pan and set aside.",
+      "Fry the garlic, peas and sweetcorn for 2 minutes, add the rice and soy sauce and fry on a high heat for 4 minutes.",
+      "Stir the egg back in with the spring onions."
+    ]
   }
 ]

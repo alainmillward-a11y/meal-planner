@@ -33,15 +33,17 @@ const openMeals = new Set(); // which Saved meals are expanded
 function blankState() {
   return {
     plan: {},        // day -> recipe name
-    portions: {},    // day -> number of people (defaults to prefs.portions)
+    guests: {},      // day -> extra portions on top of the usual household (e.g. friends over)
     busy: { Tuesday: true, Wednesday: true, Thursday: true }, // Tue–Thu start busy; tap to change
     training: {},
     pantry: {},      // ingredient name (lower case) -> true if you already have it
     marks: {},       // recipe name -> "repeat" | "never"
     extras: [],      // everyday items you typed in: [{ name, aisle }]
     bought: {},      // list item key -> true once ticked off in the shop
-    prefs: { portions: 4, maxTime: 30, vegetarian: false, avoid: "" },
+    // Household: adults count as a full portion, little ones as half.
+    prefs: { adults: 2, littleOnes: 1, maxTime: 30, vegetarian: false, avoid: "" },
     share: { code: "", name: "", lastChange: null }, // household sharing
+    recent: [],      // meals from the last couple of weeks, suggested last for variety
   };
 }
 
@@ -50,6 +52,7 @@ function loadState() {
     const saved = JSON.parse(localStorage.getItem(STORAGE_KEY)) || {};
     const s = Object.assign(blankState(), saved);
     s.prefs = Object.assign(blankState().prefs, saved.prefs || {});
+    delete s.portions; // older versions stored absolute portions per day
     s.share = Object.assign(blankState().share, saved.share || {});
     return s;
   } catch (e) {
@@ -95,8 +98,18 @@ function hasTag(recipe, tag) {
   return (recipe.tags || []).includes(tag);
 }
 
+function usualPortions() {
+  return state.prefs.adults + 0.5 * state.prefs.littleOnes;
+}
+
 function portionsFor(day) {
-  return state.portions[day] || state.prefs.portions;
+  return Math.max(0.5, usualPortions() + (state.guests[day] || 0));
+}
+
+function describePortions(day) {
+  const g = state.guests[day] || 0;
+  const base = state.prefs.adults + (state.prefs.littleOnes ? " + " + state.prefs.littleOnes + " little" : "");
+  return g ? base + " + " + g + " guest" + (g > 1 ? "s" : "") : base;
 }
 
 function avoidList() {
@@ -142,9 +155,10 @@ function pickMeal(day, used) {
   if (state.training[day]) wants.push(r => hasTag(r, "high-carb"));
 
   const allowed = recipes.filter(allowedByPrefs);
-  // "Repeat soon" meals go to the front of the queue.
-  const repeatFirst = list => list.sort((a, b) =>
-    (state.marks[b.name] === "repeat") - (state.marks[a.name] === "repeat"));
+  // "Repeat soon" meals go to the front of the queue; meals you had in the
+  // last couple of weeks go to the back, so weeks don't look the same.
+  const rank = r => (state.marks[r.name] === "repeat" ? -1 : 0) + (state.recent.includes(r.name) ? 1 : 0);
+  const repeatFirst = list => list.sort((a, b) => rank(a) - rank(b));
   const unused = repeatFirst(shuffle(allowed.filter(r => !used.has(r.name))));
   const matchesAll = r => wants.every(fn => fn(r));
   const matchesAny = r => wants.some(fn => fn(r));
@@ -224,7 +238,9 @@ function formatQty(item) {
   if (u === "ml" && q >= 1000) { q = q / 1000; u = "litres"; }
   // Round countable things (onions, tins) up to whole numbers; weights to 2 dp.
   const countable = !u || !["g", "kg", "ml", "litres", "tsp", "tbsp"].includes(u);
-  q = countable ? Math.ceil(q - 0.001) : Math.round(q * 100) / 100;
+  if (countable) q = Math.ceil(q - 0.001);
+  else if (u === "g" || u === "ml") q = q >= 100 ? Math.round(q / 10) * 10 : Math.round(q / 5) * 5 || Math.round(q);
+  else q = Math.round(q * 100) / 100;
   // "1 tin", "3 tins" (but never "3 gs" or "2 tbsps")
   const noPlural = ["g", "kg", "ml", "litres", "tsp", "tbsp"];
   if (u && q !== 1 && !noPlural.includes(u) && !u.endsWith("s")) u += "s";
@@ -300,15 +316,16 @@ function renderPlan() {
       onclick: () => { state[kind][day] = !state[kind][day]; saveState(); renderPlan(); },
     }, label);
 
-    const people = portionsFor(day);
+    // Tap cycles: usual → +1 guest → +2 → +3 → one fewer → usual.
+    const g = state.guests[day] || 0;
     const portions = el("button", {
-      class: "portions", "aria-label": "Portions for " + day,
+      class: "portions" + (g ? " on" : ""), "aria-label": "Portions for " + day + ": " + describePortions(day),
       onclick: () => {
-        // Cycle 1 → 8 then back to 1.
-        state.portions[day] = people >= 8 ? 1 : people + 1;
+        const next = g >= 3 ? -1 : g === -1 ? 0 : g + 1;
+        if (next) state.guests[day] = next; else delete state.guests[day];
         saveState(); renderAll();
       },
-    }, "👤 " + people);
+    }, "👤 " + describePortions(day));
 
     const meta = [];
     if (recipe && recipe.time) meta.push(recipe.time + " min");
@@ -450,7 +467,8 @@ function renderSaved() {
 }
 
 function renderPrefs() {
-  document.getElementById("pref-portions").textContent = state.prefs.portions;
+  document.getElementById("pref-adults").textContent = state.prefs.adults;
+  document.getElementById("pref-littleOnes").textContent = state.prefs.littleOnes;
   document.getElementById("pref-maxTime").textContent = state.prefs.maxTime;
   document.getElementById("pref-vegetarian").checked = state.prefs.vegetarian;
   const avoid = document.getElementById("pref-avoid");
@@ -536,7 +554,9 @@ function setUp() {
   document.getElementById("btn-clear").addEventListener("click", () => {
     // New week: meals, portions, "already have" ticks and bought ticks go.
     // Extras, busy/training days and preferences stay.
-    state.plan = {}; state.portions = {}; state.pantry = {}; state.bought = {};
+    const thisWeek = Object.values(state.plan).filter(Boolean);
+    state.recent = thisWeek.concat(state.recent.filter(n => !thisWeek.includes(n))).slice(0, 14);
+    state.plan = {}; state.guests = {}; state.pantry = {}; state.bought = {};
     saveState(); renderAll(); toast("Ready for a new week");
   });
   document.getElementById("btn-untick").addEventListener("click", () => {
@@ -561,7 +581,8 @@ function setUp() {
   // Preferences
   document.querySelectorAll("[data-pref]").forEach(b => b.addEventListener("click", () => {
     const key = b.dataset.pref, delta = Number(b.dataset.delta);
-    const min = key === "portions" ? 1 : 10, max = key === "portions" ? 12 : 120;
+    const limits = { adults: [1, 10], littleOnes: [0, 6], maxTime: [10, 120] }[key];
+    const [min, max] = limits;
     state.prefs[key] = Math.min(max, Math.max(min, state.prefs[key] + delta));
     saveState(); renderAll();
   }));

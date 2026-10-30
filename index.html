@@ -23,7 +23,7 @@
   <main>
     <!-- 1. Weekly planner -->
     <section id="view-plan" class="view active">
-      <p class="hint">Mark days as <b>Busy</b> (quick meals) or <b>Training</b> (high-carb meals), then let it suggest the empty days. Tap the people count to change portions.</p>
+      <p class="hint">Mark days as <b>Busy</b> (quick meals) or <b>Training</b> (high-carb meals), then let it suggest the empty days. Tap the people count on a day if you have guests.</p>
       <ol id="days" class="days"></ol>
       <div class="actions stack">
         <button id="btn-suggest" class="primary">Suggest the rest of the week</button>
@@ -64,11 +64,19 @@
       <h2 class="section-title">Preferences</h2>
       <div class="rows prefs">
         <div class="row">
-          <span class="name">Usual portions</span>
+          <span class="name">Adults (one portion each)</span>
           <span class="stepper">
-            <button type="button" data-pref="portions" data-delta="-1" aria-label="Fewer portions">−</button>
-            <b id="pref-portions">4</b>
-            <button type="button" data-pref="portions" data-delta="1" aria-label="More portions">+</button>
+            <button type="button" data-pref="adults" data-delta="-1" aria-label="Fewer adults">−</button>
+            <b id="pref-adults">2</b>
+            <button type="button" data-pref="adults" data-delta="1" aria-label="More adults">+</button>
+          </span>
+        </div>
+        <div class="row">
+          <span class="name">Little ones (half a portion each)</span>
+          <span class="stepper">
+            <button type="button" data-pref="littleOnes" data-delta="-1" aria-label="Fewer little ones">−</button>
+            <b id="pref-littleOnes">1</b>
+            <button type="button" data-pref="littleOnes" data-delta="1" aria-label="More little ones">+</button>
           </span>
         </div>
         <div class="row">

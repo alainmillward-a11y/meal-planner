@@ -178,3 +178,4 @@ button.primary.small { flex: none; min-height: 44px; padding: 0 18px; }
 .share .muted { color: var(--muted); }
 .share button.primary { width: 100%; }
 [hidden] { display: none !important; }
+.portions.on { background: var(--accent); border-color: var(--accent); color: #fff; }
