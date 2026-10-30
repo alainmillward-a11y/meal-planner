@@ -33,6 +33,8 @@ const Sync = (() => {
     for (const [k, v] of Object.entries(state.marks)) if (v) rows["marks:" + k] = v;
     for (const [k, v] of Object.entries(state.bought)) if (v) rows["bought:" + k] = true;
     for (const x of state.extras) rows["extra:" + x.name.toLowerCase()] = { name: x.name, aisle: x.aisle || "Other" };
+    for (const x of state.staples) rows["staple:" + x.name.toLowerCase()] = { name: x.name, aisle: x.aisle || "Other" };
+    rows["staples-set"] = true; // marks that this household has its own staples list
     rows["prefs"] = state.prefs;
     rows["recent"] = state.recent;
     return rows;
@@ -56,6 +58,11 @@ const Sync = (() => {
         state.extras = state.extras.filter(x => x.name.toLowerCase() !== rest);
         if (value) state.extras.push(value);
         break;
+      case "staple":
+        state.staples = state.staples.filter(x => x.name.toLowerCase() !== rest);
+        if (value) state.staples.push(value);
+        break;
+      case "staples-set": break;
       case "prefs": if (value) state.prefs = Object.assign({}, state.prefs, value); break;
       case "recent": state.recent = Array.isArray(value) ? value : []; break;
     }
@@ -182,6 +189,8 @@ const Sync = (() => {
     setStatus("Shared · connecting…", null);
     try {
       const rows = await fetchRows(state.share.code, null);
+      // The household's every-week list replaces this phone's starter list.
+      if (rows.some(r => r.key === "staples-set")) state.staples = [];
       for (const r of rows) {
         lastSeen = r.updated_at;
         applyRow(state, r.key, r.value);

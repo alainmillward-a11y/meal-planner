@@ -14,9 +14,31 @@ const SETTINGS = {
   aisleOrder: [
     "Fruit & Veg", "Bakery", "Meat & Fish", "Dairy & Eggs",
     "Pasta, Rice & Grains", "Tins & Jars", "World Foods",
-    "Herbs & Spices", "Baking", "Frozen", "Other",
+    "Herbs & Spices", "Baking", "Frozen", "Snacks", "Drinks", "Household", "Other",
   ],
 };
+
+// Starter "every week" list. Edit it in the app under Saved → Every week.
+const STARTER_STAPLES = ["Milk", "Bread", "Bananas", "Apples", "Eggs", "Butter", "Cereal", "Yoghurts", "Cheddar", "Toilet roll"];
+
+// Guesses a supermarket aisle for an item you typed in.
+const AISLE_WORDS = [
+  ["Fruit & Veg", /banana|apple|grape|orange|satsuma|berr|pear|lemon|lime|avocado|tomato|cucumber|lettuce|salad|pepper|onion|potato|carrot|broccoli|veg|fruit|mushroom|spinach|herb/],
+  ["Bakery", /bread|roll|bagel|wrap|crumpet|muffin|cake|croissant|bun|pitta/],
+  ["Meat & Fish", /chicken|beef|pork|lamb|mince|sausage|bacon|ham|fish|salmon|prawn|turkey|steak/],
+  ["Dairy & Eggs", /milk|cheese|cheddar|butter|yoghurt|yogurt|egg|cream|spread/],
+  ["Frozen", /frozen|ice cream|lolly|fish finger|chips/],
+  ["Pasta, Rice & Grains", /pasta|rice|noodle|cereal|porridge|oat|couscous|flour/],
+  ["Tins & Jars", /tin|beans|soup|jam|peanut|honey|ketchup|mayo|sauce|stock|passata/],
+  ["Household", /toilet|loo roll|kitchen roll|washing|dishwasher|bin bag|soap|shampoo|toothpaste|nappies|nappy|wipes|cleaner/],
+  ["Drinks", /juice|squash|water|coffee|tea|coke|lemonade|beer|wine/],
+  ["Snacks", /crisps|biscuit|chocolate|sweets|snack|cracker|popcorn|nuts/],
+];
+function guessAisle(name) {
+  const n = name.toLowerCase();
+  for (const [aisle, re] of AISLE_WORDS) if (re.test(n)) return aisle;
+  return "Other";
+}
 
 const DAYS = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
 const STORAGE_KEY = "mealPlanner.v1";
@@ -38,7 +60,8 @@ function blankState() {
     training: {},
     pantry: {},      // ingredient name (lower case) -> true if you already have it
     marks: {},       // recipe name -> "repeat" | "never"
-    extras: [],      // everyday items you typed in: [{ name, aisle }]
+    extras: [],      // one-off items you typed in this week: [{ name, aisle }]
+    staples: null,   // things you buy every week: [{ name, aisle }] (null = use the starter list)
     bought: {},      // list item key -> true once ticked off in the shop
     // Household: adults count as a full portion, little ones as half.
     prefs: { adults: 2, littleOnes: 1, maxTime: 30, vegetarian: false, avoid: "" },
@@ -54,6 +77,7 @@ function loadState() {
     s.prefs = Object.assign(blankState().prefs, saved.prefs || {});
     delete s.portions; // older versions stored absolute portions per day
     s.share = Object.assign(blankState().share, saved.share || {});
+    if (!Array.isArray(s.staples)) s.staples = STARTER_STAPLES.map(name => ({ name, aisle: guessAisle(name) }));
     return s;
   } catch (e) {
     return blankState();
@@ -264,22 +288,33 @@ function groupByAisle(items) {
     .map(([aisle, list]) => [aisle, list.sort((x, y) => x.name.localeCompare(y.name))]);
 }
 
-// Recipe ingredients minus what you already have, plus the extras you typed.
-// Extras live in state.extras, so swapping a meal never removes them.
+// Everything on this week's list before "already have" is applied:
+// recipe ingredients, then the every-week staples, then one-off extras.
+// Staples and extras live in state, so swapping a meal never removes them.
+function allItems() {
+  const items = weekIngredients();
+  const seen = new Set(items.map(i => i.name.toLowerCase()));
+  // A staple or extra that's already on the list from a recipe (e.g. milk
+  // for Macaroni Cheese) isn't shown twice; the recipe's quantity stands.
+  const add = (list, kind) => {
+    for (const x of list) {
+      const k = x.name.toLowerCase();
+      if (seen.has(k)) continue;
+      seen.add(k);
+      items.push({ key: kind + "|" + k, name: x.name, quantity: 0, unit: "", aisle: x.aisle || "Other", [kind]: true });
+    }
+  };
+  add(state.staples, "staple");
+  add(state.extras, "extra");
+  return items;
+}
+
 function shoppingItems() {
-  const fromMeals = weekIngredients().filter(i => !state.pantry[i.name.toLowerCase()]);
-  // An extra that's already on the list from a recipe (e.g. you typed
-  // "milk" and Macaroni Cheese needs milk) isn't shown twice.
-  const onList = new Set(fromMeals.map(i => i.name.toLowerCase()));
-  const extras = state.extras.filter(x => !onList.has(x.name.toLowerCase())).map(x => ({
-    key: "extra|" + x.name.toLowerCase(),
-    name: x.name, quantity: 0, unit: "", aisle: x.aisle || "Other", extra: true,
-  }));
-  return fromMeals.concat(extras);
+  return allItems().filter(i => !state.pantry[i.name.toLowerCase()]);
 }
 
 function itemLabel(item) {
-  const q = item.extra ? "" : formatQty(item);
+  const q = item.extra || item.staple ? "" : formatQty(item);
   return q ? item.name + " " + q : item.name;
 }
 
@@ -350,7 +385,7 @@ function renderPlan() {
 function renderPantry() {
   const box = document.getElementById("pantry");
   box.replaceChildren();
-  const items = weekIngredients();
+  const items = allItems();
   if (items.length === 0) {
     box.append(el("p", { class: "empty" }, "Pick some meals on the Week tab first."));
     return;
@@ -361,6 +396,7 @@ function renderPantry() {
       el("div", { class: "rows" }, list.map(item => {
         const key = item.name.toLowerCase();
         const have = !!state.pantry[key];
+        const qtyText = item.extra || item.staple ? (item.staple ? "every week" : "") : formatQty(item);
         return el("label", { class: "row" + (have ? " have" : "") },
           el("input", {
             type: "checkbox", checked: have,
@@ -370,7 +406,7 @@ function renderPantry() {
             },
           }),
           el("span", { class: "name" }, item.name),
-          el("span", { class: "qty" }, formatQty(item)),
+          el("span", { class: "qty" }, qtyText),
         );
       })),
     ));
@@ -405,7 +441,7 @@ function renderList() {
             },
           }),
           el("span", { class: "name" }, item.name),
-          item.extra ? null : el("span", { class: "qty" }, formatQty(item)),
+          item.extra ? null : el("span", { class: "qty" }, item.staple ? "every week" : formatQty(item)),
           item.extra ? el("button", {
             class: "remove", type: "button", "aria-label": "Remove " + item.name,
             onclick: e => {
@@ -466,6 +502,27 @@ function renderSaved() {
   }
 }
 
+function renderStaples() {
+  const box = document.getElementById("staples");
+  box.replaceChildren();
+  if (!state.staples.length) {
+    box.append(el("p", { class: "empty" }, "Nothing yet. Add the things you buy every week."));
+    return;
+  }
+  const sorted = state.staples.slice().sort((a, b) => a.name.localeCompare(b.name));
+  box.append(el("div", { class: "rows" }, sorted.map(x => el("div", { class: "row" },
+    el("span", { class: "name" }, x.name),
+    el("span", { class: "qty" }, x.aisle),
+    el("button", {
+      class: "remove", type: "button", "aria-label": "Remove " + x.name,
+      onclick: () => {
+        state.staples = state.staples.filter(y => y.name.toLowerCase() !== x.name.toLowerCase());
+        saveState(); renderAll();
+      },
+    }, "×"),
+  ))));
+}
+
 function renderPrefs() {
   document.getElementById("pref-adults").textContent = state.prefs.adults;
   document.getElementById("pref-littleOnes").textContent = state.prefs.littleOnes;
@@ -507,6 +564,7 @@ function renderAll() {
   renderPantry();
   renderList();
   renderSaved();
+  renderStaples();
   renderPrefs();
 }
 
@@ -543,8 +601,16 @@ function addExtra(name) {
   name = name.trim();
   if (!name) return;
   const exists = state.extras.some(x => x.name.toLowerCase() === name.toLowerCase());
-  if (!exists) state.extras.push({ name: name[0].toUpperCase() + name.slice(1), aisle: "Other" });
+  if (!exists) state.extras.push({ name: name[0].toUpperCase() + name.slice(1), aisle: guessAisle(name) });
   saveState(); renderList();
+}
+
+function addStaple(name) {
+  name = name.trim();
+  if (!name) return;
+  const exists = state.staples.some(x => x.name.toLowerCase() === name.toLowerCase());
+  if (!exists) state.staples.push({ name: name[0].toUpperCase() + name.slice(1), aisle: guessAisle(name) });
+  saveState(); renderAll();
 }
 
 function setUp() {
@@ -552,11 +618,11 @@ function setUp() {
     b.addEventListener("click", () => showView(b.dataset.view)));
   document.getElementById("btn-suggest").addEventListener("click", suggestWeek);
   document.getElementById("btn-clear").addEventListener("click", () => {
-    // New week: meals, portions, "already have" ticks and bought ticks go.
-    // Extras, busy/training days and preferences stay.
+    // New week: meals, guests, one-off extras, "already have" ticks and
+    // bought ticks go. Every-week staples, busy/training days and preferences stay.
     const thisWeek = Object.values(state.plan).filter(Boolean);
     state.recent = thisWeek.concat(state.recent.filter(n => !thisWeek.includes(n))).slice(0, 14);
-    state.plan = {}; state.guests = {}; state.pantry = {}; state.bought = {};
+    state.plan = {}; state.guests = {}; state.extras = []; state.pantry = {}; state.bought = {};
     saveState(); renderAll(); toast("Ready for a new week");
   });
   document.getElementById("btn-untick").addEventListener("click", () => {
@@ -576,6 +642,12 @@ function setUp() {
     input.value = "";
   });
   document.getElementById("search").addEventListener("input", renderSaved);
+  document.getElementById("staple-form").addEventListener("submit", e => {
+    e.preventDefault();
+    const input = document.getElementById("staple-input");
+    addStaple(input.value);
+    input.value = "";
+  });
   document.getElementById("shortcut-name").textContent = SETTINGS.shortcutName;
 
   // Preferences
