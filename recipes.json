@@ -1,0 +1,575 @@
+[
+  {
+    "name": "Spaghetti Bolognese",
+    "serves": 4,
+    "time": 45,
+    "tags": [
+      "batch",
+      "high-carb"
+    ],
+    "ingredients": [
+      {
+        "name": "Beef mince",
+        "quantity": 500,
+        "unit": "g",
+        "aisle": "Meat & Fish"
+      },
+      {
+        "name": "Spaghetti",
+        "quantity": 400,
+        "unit": "g",
+        "aisle": "Pasta, Rice & Grains"
+      },
+      {
+        "name": "Onion",
+        "quantity": 1,
+        "unit": "",
+        "aisle": "Fruit & Veg"
+      },
+      {
+        "name": "Carrot",
+        "quantity": 1,
+        "unit": "",
+        "aisle": "Fruit & Veg"
+      },
+      {
+        "name": "Garlic",
+        "quantity": 2,
+        "unit": "clove",
+        "aisle": "Fruit & Veg"
+      },
+      {
+        "name": "Chopped tomatoes",
+        "quantity": 2,
+        "unit": "tin",
+        "aisle": "Tins & Jars"
+      },
+      {
+        "name": "Tomato purée",
+        "quantity": 2,
+        "unit": "tbsp",
+        "aisle": "Tins & Jars"
+      },
+      {
+        "name": "Cheddar",
+        "quantity": 50,
+        "unit": "g",
+        "aisle": "Dairy & Eggs"
+      }
+    ],
+    "method": [
+      "Soften the chopped onion, carrot and garlic in a little oil for 5 minutes.",
+      "Add the mince and brown it, breaking it up.",
+      "Stir in the tomato purée, then the chopped tomatoes. Simmer for 25 minutes.",
+      "Cook the spaghetti in salted boiling water, drain, and serve with the sauce and grated cheddar."
+    ]
+  },
+  {
+    "name": "Chicken Curry with Rice",
+    "serves": 4,
+    "time": 40,
+    "tags": [
+      "high-carb"
+    ],
+    "ingredients": [
+      {
+        "name": "Chicken breast",
+        "quantity": 500,
+        "unit": "g",
+        "aisle": "Meat & Fish"
+      },
+      {
+        "name": "Basmati rice",
+        "quantity": 300,
+        "unit": "g",
+        "aisle": "Pasta, Rice & Grains"
+      },
+      {
+        "name": "Onion",
+        "quantity": 1,
+        "unit": "",
+        "aisle": "Fruit & Veg"
+      },
+      {
+        "name": "Garlic",
+        "quantity": 2,
+        "unit": "clove",
+        "aisle": "Fruit & Veg"
+      },
+      {
+        "name": "Curry paste",
+        "quantity": 1,
+        "unit": "jar",
+        "aisle": "Tins & Jars"
+      },
+      {
+        "name": "Chopped tomatoes",
+        "quantity": 1,
+        "unit": "tin",
+        "aisle": "Tins & Jars"
+      },
+      {
+        "name": "Natural yoghurt",
+        "quantity": 150,
+        "unit": "g",
+        "aisle": "Dairy & Eggs"
+      },
+      {
+        "name": "Naan bread",
+        "quantity": 2,
+        "unit": "",
+        "aisle": "Bakery"
+      }
+    ],
+    "method": [
+      "Fry the chopped onion and garlic for 5 minutes, then add the diced chicken and brown.",
+      "Stir in the curry paste, then the chopped tomatoes. Simmer for 20 minutes.",
+      "Cook the rice. Warm the naan in the oven.",
+      "Take the curry off the heat, stir in the yoghurt and serve."
+    ]
+  },
+  {
+    "name": "Shepherd's Pie",
+    "serves": 4,
+    "time": 60,
+    "tags": [
+      "batch"
+    ],
+    "ingredients": [
+      {
+        "name": "Lamb mince",
+        "quantity": 500,
+        "unit": "g",
+        "aisle": "Meat & Fish"
+      },
+      {
+        "name": "Potatoes",
+        "quantity": 1000,
+        "unit": "g",
+        "aisle": "Fruit & Veg"
+      },
+      {
+        "name": "Onion",
+        "quantity": 1,
+        "unit": "",
+        "aisle": "Fruit & Veg"
+      },
+      {
+        "name": "Carrot",
+        "quantity": 2,
+        "unit": "",
+        "aisle": "Fruit & Veg"
+      },
+      {
+        "name": "Frozen peas",
+        "quantity": 150,
+        "unit": "g",
+        "aisle": "Frozen"
+      },
+      {
+        "name": "Beef stock cube",
+        "quantity": 1,
+        "unit": "",
+        "aisle": "Tins & Jars"
+      },
+      {
+        "name": "Butter",
+        "quantity": 50,
+        "unit": "g",
+        "aisle": "Dairy & Eggs"
+      },
+      {
+        "name": "Milk",
+        "quantity": 100,
+        "unit": "ml",
+        "aisle": "Dairy & Eggs"
+      }
+    ],
+    "method": [
+      "Boil the peeled, chopped potatoes for 15 minutes, then mash with the butter and milk.",
+      "Meanwhile brown the lamb mince with the chopped onion and carrot.",
+      "Add the crumbled stock cube, a splash of water and the peas. Simmer for 10 minutes.",
+      "Spoon into a dish, top with mash and bake at 200°C for 20 minutes."
+    ]
+  },
+  {
+    "name": "Sausage and Mash",
+    "serves": 4,
+    "time": 30,
+    "tags": [
+      "quick"
+    ],
+    "ingredients": [
+      {
+        "name": "Pork sausages",
+        "quantity": 8,
+        "unit": "",
+        "aisle": "Meat & Fish"
+      },
+      {
+        "name": "Potatoes",
+        "quantity": 1000,
+        "unit": "g",
+        "aisle": "Fruit & Veg"
+      },
+      {
+        "name": "Onion",
+        "quantity": 2,
+        "unit": "",
+        "aisle": "Fruit & Veg"
+      },
+      {
+        "name": "Gravy granules",
+        "quantity": 1,
+        "unit": "tub",
+        "aisle": "Tins & Jars"
+      },
+      {
+        "name": "Frozen peas",
+        "quantity": 200,
+        "unit": "g",
+        "aisle": "Frozen"
+      },
+      {
+        "name": "Butter",
+        "quantity": 30,
+        "unit": "g",
+        "aisle": "Dairy & Eggs"
+      },
+      {
+        "name": "Milk",
+        "quantity": 100,
+        "unit": "ml",
+        "aisle": "Dairy & Eggs"
+      }
+    ],
+    "method": [
+      "Grill or oven-cook the sausages for 20 to 25 minutes.",
+      "Boil the peeled, chopped potatoes for 15 minutes, then mash with butter and milk.",
+      "Fry the sliced onions slowly until soft and make up the gravy.",
+      "Boil the peas for 3 minutes and serve everything together."
+    ]
+  },
+  {
+    "name": "Chilli con Carne",
+    "serves": 4,
+    "time": 45,
+    "tags": [
+      "batch",
+      "high-carb"
+    ],
+    "ingredients": [
+      {
+        "name": "Beef mince",
+        "quantity": 500,
+        "unit": "g",
+        "aisle": "Meat & Fish"
+      },
+      {
+        "name": "Basmati rice",
+        "quantity": 300,
+        "unit": "g",
+        "aisle": "Pasta, Rice & Grains"
+      },
+      {
+        "name": "Kidney beans",
+        "quantity": 1,
+        "unit": "tin",
+        "aisle": "Tins & Jars"
+      },
+      {
+        "name": "Chopped tomatoes",
+        "quantity": 1,
+        "unit": "tin",
+        "aisle": "Tins & Jars"
+      },
+      {
+        "name": "Onion",
+        "quantity": 1,
+        "unit": "",
+        "aisle": "Fruit & Veg"
+      },
+      {
+        "name": "Red pepper",
+        "quantity": 1,
+        "unit": "",
+        "aisle": "Fruit & Veg"
+      },
+      {
+        "name": "Garlic",
+        "quantity": 2,
+        "unit": "clove",
+        "aisle": "Fruit & Veg"
+      },
+      {
+        "name": "Chilli powder",
+        "quantity": 2,
+        "unit": "tsp",
+        "aisle": "Herbs & Spices"
+      },
+      {
+        "name": "Soured cream",
+        "quantity": 150,
+        "unit": "ml",
+        "aisle": "Dairy & Eggs"
+      }
+    ],
+    "method": [
+      "Fry the chopped onion, pepper and garlic for 5 minutes, then brown the mince.",
+      "Add the chilli powder, chopped tomatoes and drained kidney beans. Simmer for 25 minutes.",
+      "Cook the rice.",
+      "Serve with soured cream."
+    ]
+  },
+  {
+    "name": "Salmon, New Potatoes and Greens",
+    "serves": 4,
+    "time": 25,
+    "tags": [
+      "quick"
+    ],
+    "ingredients": [
+      {
+        "name": "Salmon fillets",
+        "quantity": 4,
+        "unit": "",
+        "aisle": "Meat & Fish"
+      },
+      {
+        "name": "New potatoes",
+        "quantity": 750,
+        "unit": "g",
+        "aisle": "Fruit & Veg"
+      },
+      {
+        "name": "Tenderstem broccoli",
+        "quantity": 200,
+        "unit": "g",
+        "aisle": "Fruit & Veg"
+      },
+      {
+        "name": "Lemon",
+        "quantity": 1,
+        "unit": "",
+        "aisle": "Fruit & Veg"
+      },
+      {
+        "name": "Butter",
+        "quantity": 20,
+        "unit": "g",
+        "aisle": "Dairy & Eggs"
+      }
+    ],
+    "method": [
+      "Boil the new potatoes for 15 to 20 minutes.",
+      "Season the salmon and bake at 200°C for 12 to 15 minutes, with a slice of lemon on top.",
+      "Steam or boil the broccoli for 4 minutes.",
+      "Toss the potatoes in butter and serve."
+    ]
+  },
+  {
+    "name": "Veggie Noodle Stir-fry",
+    "serves": 4,
+    "time": 20,
+    "tags": [
+      "quick",
+      "vegetarian",
+      "high-carb"
+    ],
+    "ingredients": [
+      {
+        "name": "Egg noodles",
+        "quantity": 300,
+        "unit": "g",
+        "aisle": "Pasta, Rice & Grains"
+      },
+      {
+        "name": "Stir-fry vegetables",
+        "quantity": 2,
+        "unit": "pack",
+        "aisle": "Fruit & Veg"
+      },
+      {
+        "name": "Red pepper",
+        "quantity": 1,
+        "unit": "",
+        "aisle": "Fruit & Veg"
+      },
+      {
+        "name": "Garlic",
+        "quantity": 2,
+        "unit": "clove",
+        "aisle": "Fruit & Veg"
+      },
+      {
+        "name": "Soy sauce",
+        "quantity": 3,
+        "unit": "tbsp",
+        "aisle": "World Foods"
+      },
+      {
+        "name": "Eggs",
+        "quantity": 4,
+        "unit": "",
+        "aisle": "Dairy & Eggs"
+      }
+    ],
+    "method": [
+      "Cook the noodles as the packet says and drain.",
+      "Stir-fry the garlic, sliced pepper and vegetables on a high heat for 4 minutes.",
+      "Push to one side, scramble the eggs in the pan, then mix everything together.",
+      "Add the noodles and soy sauce, toss for 2 minutes and serve."
+    ]
+  },
+  {
+    "name": "Jacket Potatoes with Beans and Cheese",
+    "serves": 4,
+    "time": 20,
+    "tags": [
+      "quick",
+      "vegetarian"
+    ],
+    "ingredients": [
+      {
+        "name": "Baking potatoes",
+        "quantity": 4,
+        "unit": "",
+        "aisle": "Fruit & Veg"
+      },
+      {
+        "name": "Baked beans",
+        "quantity": 2,
+        "unit": "tin",
+        "aisle": "Tins & Jars"
+      },
+      {
+        "name": "Cheddar",
+        "quantity": 150,
+        "unit": "g",
+        "aisle": "Dairy & Eggs"
+      },
+      {
+        "name": "Butter",
+        "quantity": 20,
+        "unit": "g",
+        "aisle": "Dairy & Eggs"
+      },
+      {
+        "name": "Salad leaves",
+        "quantity": 1,
+        "unit": "bag",
+        "aisle": "Fruit & Veg"
+      }
+    ],
+    "method": [
+      "Prick the potatoes and microwave for 8 to 10 minutes, turning halfway (or bake at 200°C for an hour).",
+      "Heat the beans.",
+      "Split the potatoes, add butter, beans and grated cheddar.",
+      "Serve with salad leaves."
+    ]
+  },
+  {
+    "name": "Roast Chicken Dinner",
+    "serves": 4,
+    "time": 100,
+    "tags": [],
+    "ingredients": [
+      {
+        "name": "Whole chicken",
+        "quantity": 1,
+        "unit": "",
+        "aisle": "Meat & Fish"
+      },
+      {
+        "name": "Potatoes",
+        "quantity": 1000,
+        "unit": "g",
+        "aisle": "Fruit & Veg"
+      },
+      {
+        "name": "Carrot",
+        "quantity": 3,
+        "unit": "",
+        "aisle": "Fruit & Veg"
+      },
+      {
+        "name": "Broccoli",
+        "quantity": 1,
+        "unit": "head",
+        "aisle": "Fruit & Veg"
+      },
+      {
+        "name": "Gravy granules",
+        "quantity": 1,
+        "unit": "tub",
+        "aisle": "Tins & Jars"
+      },
+      {
+        "name": "Yorkshire puddings",
+        "quantity": 1,
+        "unit": "pack",
+        "aisle": "Frozen"
+      }
+    ],
+    "method": [
+      "Roast the chicken at 190°C for 20 minutes per 500g plus 20 minutes.",
+      "Parboil the peeled potatoes for 10 minutes, shake them up, then roast in hot oil for 45 minutes.",
+      "Boil the carrots and broccoli for the last 10 minutes and cook the Yorkshire puddings as the packet says.",
+      "Rest the chicken for 15 minutes, make the gravy and carve."
+    ]
+  },
+  {
+    "name": "Macaroni Cheese",
+    "serves": 4,
+    "time": 35,
+    "tags": [
+      "vegetarian",
+      "high-carb",
+      "batch"
+    ],
+    "ingredients": [
+      {
+        "name": "Macaroni",
+        "quantity": 400,
+        "unit": "g",
+        "aisle": "Pasta, Rice & Grains"
+      },
+      {
+        "name": "Cheddar",
+        "quantity": 200,
+        "unit": "g",
+        "aisle": "Dairy & Eggs"
+      },
+      {
+        "name": "Milk",
+        "quantity": 600,
+        "unit": "ml",
+        "aisle": "Dairy & Eggs"
+      },
+      {
+        "name": "Butter",
+        "quantity": 50,
+        "unit": "g",
+        "aisle": "Dairy & Eggs"
+      },
+      {
+        "name": "Plain flour",
+        "quantity": 50,
+        "unit": "g",
+        "aisle": "Baking"
+      },
+      {
+        "name": "Tomatoes",
+        "quantity": 2,
+        "unit": "",
+        "aisle": "Fruit & Veg"
+      }
+    ],
+    "method": [
+      "Cook the macaroni and drain.",
+      "Melt the butter, stir in the flour, then whisk in the milk a little at a time until thick.",
+      "Stir in most of the cheese, then the macaroni. Pour into a dish.",
+      "Top with sliced tomatoes and the rest of the cheese. Grill or bake at 200°C for 15 minutes."
+    ]
+  }
+]

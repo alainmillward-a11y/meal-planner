@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Meal Planner</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Meals">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="theme-color" content="#f7f5ef">
+  <link rel="apple-touch-icon" href="icon.png">
+  <link rel="icon" href="icon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <p class="eyebrow">What's for tea?</p>
+    <h1 id="title">Your week</h1>
+    <p id="sync-status" class="sync" hidden></p>
+  </header>
+
+  <main>
+    <!-- 1. Weekly planner -->
+    <section id="view-plan" class="view active">
+      <p class="hint">Mark days as <b>Busy</b> (quick meals) or <b>Training</b> (high-carb meals), then let it suggest the empty days. Tap the people count to change portions.</p>
+      <ol id="days" class="days"></ol>
+      <div class="actions stack">
+        <button id="btn-suggest" class="primary">Suggest the rest of the week</button>
+        <button id="btn-clear" class="ghost">Start a new week</button>
+      </div>
+    </section>
+
+    <!-- 2. Already have -->
+    <section id="view-pantry" class="view">
+      <p class="hint">Tick anything you already have at home. It won't go on the shopping list. Ticks are cleared when you start a new week.</p>
+      <div id="pantry"></div>
+      <div class="actions stack">
+        <button id="btn-untick" class="ghost">Untick all</button>
+      </div>
+    </section>
+
+    <!-- 3. Shopping list -->
+    <section id="view-list" class="view">
+      <form id="extra-form" class="add-row" autocomplete="off">
+        <input type="text" id="extra-input" placeholder="Add an everyday item, e.g. Milk" enterkeyhint="done">
+        <button type="submit" class="primary small">Add</button>
+      </form>
+      <div id="list"></div>
+      <div class="actions stack">
+        <button id="btn-reminders" class="primary">Send to Reminders</button>
+        <button id="btn-copy" class="ghost">Copy list as text</button>
+        <button id="btn-unbuy" class="ghost">Untick bought items</button>
+      </div>
+      <p class="hint">Send to Reminders runs the Shortcut called “<span id="shortcut-name"></span>” on your iPhone. Items ticked as bought are left out.</p>
+    </section>
+
+    <!-- 4. Saved meals + preferences -->
+    <section id="view-saved" class="view">
+      <input type="search" id="search" placeholder="Search your saved meals" autocomplete="off">
+      <p class="hint">Tap a meal for ingredients and method. <b>Repeat soon</b> meals get picked first by Suggest; <b>Not again</b> meals are never suggested.</p>
+      <div id="saved"></div>
+
+      <h2 class="section-title">Preferences</h2>
+      <div class="rows prefs">
+        <div class="row">
+          <span class="name">Usual portions</span>
+          <span class="stepper">
+            <button type="button" data-pref="portions" data-delta="-1" aria-label="Fewer portions">−</button>
+            <b id="pref-portions">4</b>
+            <button type="button" data-pref="portions" data-delta="1" aria-label="More portions">+</button>
+          </span>
+        </div>
+        <div class="row">
+          <span class="name">Busy-day meals take at most</span>
+          <span class="stepper">
+            <button type="button" data-pref="maxTime" data-delta="-5" aria-label="Less time">−</button>
+            <b><span id="pref-maxTime">30</span> min</b>
+            <button type="button" data-pref="maxTime" data-delta="5" aria-label="More time">+</button>
+          </span>
+        </div>
+        <label class="row">
+          <span class="name">Vegetarian meals only</span>
+          <input type="checkbox" id="pref-vegetarian">
+        </label>
+        <div class="row column">
+          <span class="name">Ingredients to avoid (comma separated)</span>
+          <input type="text" id="pref-avoid" placeholder="e.g. mushrooms, prawns" autocomplete="off">
+        </div>
+      </div>
+      <p class="hint">Suggest skips meals that use an avoided ingredient. You can still pick them by hand.</p>
+
+      <h2 class="section-title">Share with your household</h2>
+      <div id="share" class="rows share">
+        <div class="row column">
+          <span class="name">Your name (shown next to your changes)</span>
+          <input type="text" id="share-name" placeholder="e.g. Alain" autocomplete="given-name">
+        </div>
+        <div id="share-unavailable" class="row column" hidden>
+          <span class="name muted">Sharing isn't set up in this copy of the app yet.</span>
+        </div>
+        <div id="share-join" class="row column" hidden>
+          <span class="name">Both phones type the same household code. One of you creates it, the other joins.</span>
+          <button type="button" id="share-new" class="primary">Create a new household code</button>
+          <form id="share-join-form" class="add-row">
+            <input type="text" id="share-code-input" placeholder="or type a code to join" autocapitalize="none" autocomplete="off">
+            <button type="submit" class="primary small">Join</button>
+          </form>
+        </div>
+        <div id="share-joined" class="row column" hidden>
+          <span class="name">Household code (give this to Rach):</span>
+          <b id="share-code" class="code"></b>
+          <button type="button" id="share-leave" class="ghost">Stop sharing on this phone</button>
+        </div>
+      </div>
+      <p class="hint">Changes save straight away and other phones catch up within a few seconds. If you both change the same thing, the later change wins.</p>
+    </section>
+  </main>
+
+  <nav class="tabs">
+    <button data-view="plan" class="active">Week</button>
+    <button data-view="pantry">Have</button>
+    <button data-view="list">Shopping</button>
+    <button data-view="saved">Saved</button>
+  </nav>
+
+  <div id="toast" class="toast" role="status"></div>
+
+  <script src="sync.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
