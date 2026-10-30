@@ -5,8 +5,8 @@ const SETTINGS = {
   // Sharing between phones. Paste the Project URL and the anon/publishable
   // key from Supabase here. Leave both empty to run on one phone only.
   supabase: {
-    url: "",
-    key: "",
+    url: "https://fdjuhnrhltvwgcnwybec.supabase.co",
+    key: "sb_publishable_o8euPNL05xehyilTrQBWMg_0uOEuYF9",
   },
   // Must match the name of the Shortcut on your iPhone exactly.
   shortcutName: "Add to Shopping",
